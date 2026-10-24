@@ -191,13 +191,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .award p:last-child { max-width: 60ch; }
 .rocket-card { grid-column: 10 / -1; display: grid; gap: 10px; position: sticky; top: 90px; }
 .rocket-card img { width: 100%; aspect-ratio: 4 / 5; border-radius: var(--radius); }
-.certs-h { font-size: clamp(2rem, 1rem + 3vw, 4rem); line-height: .95; margin-top: clamp(64px, 8vw, 120px); }
-.certs-h .serif { color: var(--papaya); }
-.certs { margin-top: 20px; }
-.certs li { display: flex; justify-content: space-between; gap: 16px; padding: 18px 0; border-top: 1.5px solid var(--ink); }
-.certs li:last-child { border-bottom: 1.5px solid var(--ink); }
-.certs .cert-name { font-weight: 700; }
-.certs .cert-by, .certs .certs-empty { color: var(--muted); }
 
 /* ============ Collage ============ */
 .collage {
