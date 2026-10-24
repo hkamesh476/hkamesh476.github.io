@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="A papaya Bank of Begonia carnival ticket with a QR code being scanned">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="A papaya Carnival Cash ticket with a QR code being scanned">
   <style>
     .ticket { transform-box: view-box; transform-origin: 250px 250px; animation: float 6s ease-in-out infinite; }
     .scan { animation: scan 2.4s cubic-bezier(.6,0,.4,1) infinite; }
@@ -12,8 +12,8 @@
   <g class="ticket">
     <path d="M40 110 H460 V200 a22 22 0 0 0 0 44 V390 H40 V244 a22 22 0 0 0 0 -44 Z" fill="#ff8000"/>
     <path d="M246 124 V376" stroke="#1d1f22" stroke-width="3" stroke-dasharray="8 8" opacity=".55"/>
-    <text x="64" y="168" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="30" fill="#1d1f22">BANK OF</text>
-    <text x="64" y="202" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="30" fill="#1d1f22">BEGONIA</text>
+    <text x="64" y="168" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="30" fill="#1d1f22">CARNIVAL</text>
+    <text x="64" y="202" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="30" fill="#1d1f22">CASH</text>
     <text x="64" y="300" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="64" fill="#1d1f22">20</text>
     <text x="64" y="330" font-family="Arial, sans-serif" font-weight="700" font-size="16" fill="#1d1f22">TICKETS</text>
     <text x="64" y="364" font-family="Arial, sans-serif" font-size="13" fill="#1d1f22">Scan at any stall</text>
