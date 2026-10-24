@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-label="Supply and demand diagram with equilibrium, a price floor and a price ceiling">
+  <style>
+    .lbl { font-family: Arial, Helvetica, sans-serif; font-size: 15px; fill: #9fa3a8; }
+    .tag { font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 15px; }
+    .eq { transform-box: fill-box; transform-origin: 50% 50%; animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { transform: scale(1); opacity: .35; } 50% { transform: scale(2.2); opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .eq { animation: none; opacity: 0; } }
+  </style>
+  <rect width="500" height="500" fill="#1d1f22"/>
+
+  <text x="70" y="64" class="tag" fill="#f2f1ea">SUPPLY AND DEMAND</text>
+
+  <!-- price floor (above equilibrium) and price ceiling (below) -->
+  <path d="M70 185 H380" stroke="#a8d98a" stroke-width="3" stroke-dasharray="10 8"/>
+  <path d="M70 345 H380" stroke="#a8d98a" stroke-width="3"/>
+  <text x="390" y="190" class="tag" fill="#a8d98a">Price floor</text>
+  <text x="390" y="350" class="tag" fill="#a8d98a">Price ceiling</text>
+
+  <!-- demand slopes down, supply slopes up -->
+  <path d="M70 110 L380 420" stroke="#8fd3ff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M70 420 L380 110" stroke="#ff8000" stroke-width="4" stroke-linecap="round"/>
+  <text x="390" y="115" class="tag" fill="#ff8000">Supply</text>
+  <text x="390" y="425" class="tag" fill="#8fd3ff">Demand</text>
+
+  <!-- equilibrium -->
+  <path d="M70 265 H225 V420" stroke="#f2f1ea" stroke-width="2" stroke-dasharray="6 6" fill="none" opacity=".7"/>
+  <circle class="eq" cx="225" cy="265" r="9" fill="#f2f1ea"/>
+  <circle cx="225" cy="265" r="7" fill="#f2f1ea"/>
+  <text x="80" y="255" class="tag" fill="#f2f1ea">Equilibrium</text>
+
+  <!-- axes -->
+  <path d="M70 96 V420 H392" stroke="#f2f1ea" stroke-width="4" fill="none" stroke-linejoin="round"/>
+  <text x="225" y="458" class="lbl" text-anchor="middle">Quantity</text>
+  <text x="38" y="265" class="lbl" text-anchor="middle" transform="rotate(-90 38 265)">Price</text>
+</svg>

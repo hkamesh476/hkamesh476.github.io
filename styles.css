@@ -265,7 +265,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .split-l { left: 0; }
 .split-l img { border-radius: 0 999px 999px 0; object-position: 52% 50%; }
 .split-r { right: 0; }
-.split-r img { border-radius: 999px 0 0 999px; object-position: 40% 50%; }
+.split-r img { border-radius: 999px 0 0 999px; }
 .split-text { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 3vw, 48px); max-width: 44vw; }
 .split-col { display: grid; gap: 14px; align-content: start; }
 .split-col:first-child { text-align: right; justify-items: end; }
@@ -273,6 +273,15 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .split-word .serif { font-size: clamp(2.5rem, 1rem + 4.4vw, 5.5rem); color: var(--papaya); font-style: italic; text-transform: none; }
 .split-word .sans { font-size: clamp(2.25rem, 1rem + 3.4vw, 4.75rem); }
 .split-col p:last-child { max-width: 24ch; font-size: .9375rem; }
+
+/* ============ The team ============ */
+.team { padding: 0 var(--m) calc(var(--section) * .6); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); }
+.team-pic { grid-column: 2 / span 10; }
+.team-pic img { width: 100%; aspect-ratio: 1001 / 566; object-fit: cover; }
+.team-h { margin-bottom: clamp(20px, 3vw, 40px); font-size: clamp(2.75rem, 1rem + 5vw, 7rem); }
+.team-pic figcaption { margin-top: 12px; max-width: 64ch; color: var(--muted); }
+@media (max-width: 700px) { .team-pic { grid-column: 1 / -1; } }
+.split-r img { object-position: 4% 50%; }  /* Harshan is at the left edge of the team photo */
 
 /* ============ Résumé ============ */
 .resume { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); row-gap: 48px; padding: var(--section) var(--m); align-items: start; }
@@ -452,7 +461,7 @@ figcaption code { font-family: ui-monospace, Menlo, Consolas, monospace; font-si
 /* ============ Print: the résumé only ============ */
 @media print {
   body { background: #fff; color: #000; }
-  .bar, .menu, .hero, .message, .awards, .collage, .work, .begonia, .learning-teaser, .split, .footer, #print { display: none !important; }
+  .bar, .menu, .hero, .message, .awards, .collage, .work, .begonia, .learning-teaser, .split, .team, .footer, #print { display: none !important; }
   .js .reveal { opacity: 1 !important; transform: none !important; }
   .resume { padding: 0; display: block; }
   .resume-head { position: static; margin-bottom: 20px; }

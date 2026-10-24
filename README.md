@@ -11,10 +11,11 @@ Everything you'll edit is in `index.html`. Look for the comments in capital lett
 - **Add an award:** find `AWARDS & CERTIFICATIONS`, copy one `<details class="bar">` block, change the text. Put the result (P1, P2, P3, Winner, Award) in `<b class="pos">`.
 - **Add a certification:** in the same section, delete the "Certifications are on their way" line and copy the commented-out `<li>` template.
 - **Add a project:** copy one `<li>` in the `PROJECTS` list, and add a matching `<img data-key="...">` in the `work-frame` block (same `data-key`).
-- **Change your photo:** replace `assets/cricket-bat-ball.jpg` (the small square in "About me") with a square photo of yourself.
+- **Change your photo:** replace `assets/harshan.webp` (the portrait at the top) with another square photo of yourself, keeping the same file name.
+- **Learning page:** edit `learning.html` to add what you're learning next.
 
 Then commit and push. GitHub Pages republishes in about a minute.
 
 ## Picture credits
 
-All pictures are openly licensed and credited in the site footer. `assets/credits.json` lists each one with its source and licence.
+Photos of Harshan, Carnival 2026 and the Monroe Falcons are his own or used with permission; the McLaren team photo is McLaren Racing's. The rocket, ticket and supply-and-demand graphics are drawings made for this site. Credits are in the site footer.
