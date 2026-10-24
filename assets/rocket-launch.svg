@@ -1,97 +1,101 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="A papaya model rocket lifting off its launch rail">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="An air-powered rocket launching about 35 feet into the air">
   <style>
-    .rocket { animation: climb 6s infinite; }
-    .flame { transform-box: fill-box; transform-origin: 50% 0; opacity: 0; animation: burn 6s infinite; }
-    .flicker { transform-box: fill-box; transform-origin: 50% 0; animation: flicker .12s infinite alternate; }
-    .trail { transform-box: fill-box; transform-origin: 50% 100%; transform: scaleY(0); animation: trail 6s infinite; }
-    .puff { transform-box: fill-box; transform-origin: 50% 50%; opacity: 0; animation: puff 6s infinite; }
-    .puff:nth-of-type(2) { animation-delay: .08s; }
-    .puff:nth-of-type(3) { animation-delay: .16s; }
-    .puff:nth-of-type(4) { animation-delay: .24s; }
-    .puff:nth-of-type(5) { animation-delay: .32s; }
-    .star { animation: twinkle 3s infinite alternate; }
-    .star:nth-child(2n) { animation-delay: 1.4s; }
+    .rocket { animation: climb 6.5s infinite; }
+    .trail { transform-box: fill-box; transform-origin: 50% 100%; transform: scaleY(0); animation: trail 6.5s infinite; }
+    .burst { transform-box: fill-box; transform-origin: 50% 50%; opacity: 0; animation: burst 6.5s infinite; }
+    .burst:nth-of-type(2) { animation-delay: .05s; }
+    .burst:nth-of-type(3) { animation-delay: .1s; }
+    .burst:nth-of-type(4) { animation-delay: .15s; }
+    .whoosh { opacity: 0; animation: whoosh 6.5s infinite; }
+    .apex { opacity: .45; animation: apex 6.5s infinite; }
+    .gauge { transform-box: fill-box; transform-origin: 50% 100%; animation: gauge 6.5s infinite; }
 
     @keyframes climb {
       0% { transform: translateY(0); opacity: 0; }
-      6%, 26% { transform: translateY(0); opacity: 1; animation-timing-function: cubic-bezier(.55, 0, .9, .55); }
-      72% { transform: translateY(-480px); opacity: 1; }
-      100% { transform: translateY(-480px); opacity: 0; }
+      5%, 22% { transform: translateY(0); opacity: 1; animation-timing-function: cubic-bezier(.2, .7, .3, 1); }
+      52% { transform: translateY(-252px); opacity: 1; }
+      64% { transform: translateY(-252px); opacity: 1; }
+      74%, 100% { transform: translateY(-252px); opacity: 0; }
     }
-    @keyframes burn {
-      0%, 20% { opacity: 0; transform: scaleY(.2); }
-      24% { opacity: 1; transform: scaleY(1); }
-      72% { opacity: 1; transform: scaleY(1.3); }
-      74%, 100% { opacity: 0; }
-    }
-    @keyframes flicker { from { transform: scaleY(.85) scaleX(.95); } to { transform: scaleY(1.12) scaleX(1.05); } }
     @keyframes trail {
-      0%, 26% { transform: scaleY(0); opacity: .55; animation-timing-function: cubic-bezier(.55, 0, .9, .55); }
-      72% { transform: scaleY(1); opacity: .55; }
-      96%, 100% { transform: scaleY(1); opacity: 0; }
+      0%, 22% { transform: scaleY(0); opacity: .35; animation-timing-function: cubic-bezier(.2, .7, .3, 1); }
+      52% { transform: scaleY(1); opacity: .35; }
+      74%, 100% { transform: scaleY(1); opacity: 0; }
     }
-    @keyframes puff {
-      0%, 20% { opacity: 0; transform: scale(.2); }
-      26% { opacity: .9; transform: scale(1); }
-      60% { opacity: .5; transform: scale(2.1); }
-      90%, 100% { opacity: 0; transform: scale(2.6); }
+    @keyframes burst {
+      0%, 21% { opacity: 0; transform: scale(.2); }
+      25% { opacity: .9; transform: scale(1); }
+      45% { opacity: .4; transform: scale(2); }
+      60%, 100% { opacity: 0; transform: scale(2.4); }
     }
-    @keyframes twinkle { from { opacity: .25; } to { opacity: .8; } }
-
+    @keyframes whoosh { 0%, 21% { opacity: 0; } 24% { opacity: 1; } 34%, 100% { opacity: 0; } }
+    @keyframes apex { 0%, 48% { opacity: .45; } 52%, 64% { opacity: 1; } 74%, 100% { opacity: .45; } }
+    @keyframes gauge {
+      0%, 4% { transform: rotate(-70deg); }
+      20% { transform: rotate(60deg); }
+      23%, 100% { transform: rotate(-70deg); }
+    }
     @media (prefers-reduced-motion: reduce) {
-      .rocket, .flame, .flicker, .trail, .puff, .star { animation: none; }
+      .rocket, .trail, .burst, .whoosh, .apex, .gauge { animation: none; }
       .rocket { opacity: 1; }
     }
   </style>
 
-  <!-- night sky -->
-  <rect width="400" height="500" fill="#1a1d21"/>
-  <g fill="#ececec">
-    <circle class="star" cx="52" cy="60" r="1.6"/>
-    <circle class="star" cx="118" cy="132" r="1.2"/>
-    <circle class="star" cx="330" cy="48" r="1.8"/>
-    <circle class="star" cx="288" cy="150" r="1.2"/>
-    <circle class="star" cx="360" cy="240" r="1.4"/>
-    <circle class="star" cx="40" cy="220" r="1.2"/>
-    <circle class="star" cx="250" cy="90" r="1"/>
-    <circle class="star" cx="80" cy="330" r="1"/>
+  <rect width="400" height="500" fill="#1d1f22"/>
+
+  <!-- height scale in feet: 10.3 px per foot from the top of the pad -->
+  <g font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#9fa3a8">
+    <g stroke="#3a3e43" stroke-width="2">
+      <path d="M44 440 V80"/>
+      <path d="M44 440 H56 M44 388.6 H52 M44 337.1 H56 M44 285.7 H52 M44 234.3 H56 M44 182.9 H52 M44 131.4 H56"/>
+    </g>
+    <text x="62" y="444">0 ft</text>
+    <text x="62" y="341">10</text>
+    <text x="62" y="238">20</text>
+    <text x="62" y="135">30</text>
+  </g>
+  <g class="apex">
+    <path d="M44 80 H356" stroke="#ff8000" stroke-width="2" stroke-dasharray="6 6"/>
+    <text x="356" y="70" text-anchor="end" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="20" fill="#ff8000">35 FT</text>
   </g>
 
   <!-- the field -->
-  <rect y="446" width="400" height="54" fill="#22271f"/>
-  <rect y="446" width="400" height="4" fill="#2e3529"/>
+  <rect y="446" width="400" height="54" fill="#23281f"/>
 
-  <!-- smoke trail behind the rocket -->
-  <rect class="trail" x="193" y="-60" width="14" height="500" rx="7" fill="#cfd3d7"/>
+  <!-- faint mist trail -->
+  <rect class="trail" x="196" y="188" width="8" height="252" rx="4" fill="#cfd3d7"/>
 
-  <!-- launch rail and pad -->
-  <rect x="150" y="436" width="100" height="10" fill="#3a3f45"/>
-  <rect x="198.5" y="250" width="3" height="188" fill="#8a9097"/>
-  <path d="M200 436 L170 446 M200 436 L230 446" stroke="#8a9097" stroke-width="3"/>
+  <!-- launcher: tube on a base, hose to a foot pump with a pressure gauge -->
+  <rect x="160" y="436" width="80" height="10" rx="2" fill="#3a3e43"/>
+  <rect x="197" y="380" width="6" height="58" fill="#8a9097"/>
+  <path d="M170 441 C140 441 130 452 110 452" fill="none" stroke="#5d6066" stroke-width="5" stroke-linecap="round"/>
+  <rect x="88" y="430" width="24" height="16" rx="3" fill="#3a3e43"/>
+  <circle cx="100" cy="414" r="15" fill="#f2f1ea"/>
+  <path class="gauge" d="M98.5 414 L100 402 L101.5 414 Z" fill="#ff8000"/>
+  <circle cx="100" cy="414" r="2.5" fill="#1d1f22"/>
+  <text x="100" y="472" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#9fa3a8">PUMP</text>
 
   <!-- the rocket -->
   <g class="rocket">
-    <g class="flame">
-      <g class="flicker">
-        <path d="M188 420 Q200 492 212 420 Z" fill="#ffd166"/>
-        <path d="M193 420 Q200 470 207 420 Z" fill="#ff8000"/>
-      </g>
-    </g>
-    <path d="M182 404 L170 426 L188 420 Z" fill="#c25e00"/>
-    <path d="M218 404 L230 426 L212 420 Z" fill="#c25e00"/>
-    <rect x="188" y="320" width="24" height="100" fill="#ff8000"/>
-    <rect x="188" y="396" width="24" height="7" fill="#121416"/>
-    <path d="M188 320 Q188 290 200 278 Q212 290 212 320 Z" fill="#ececec"/>
-    <circle cx="200" cy="344" r="5" fill="#121416"/>
-    <circle cx="200" cy="344" r="2.5" fill="#8fd3ff"/>
+    <path d="M184 418 L174 438 L190 432 Z" fill="#c25e00"/>
+    <path d="M216 418 L226 438 L210 432 Z" fill="#c25e00"/>
+    <rect x="190" y="352" width="20" height="84" rx="2" fill="#ff8000"/>
+    <rect x="190" y="412" width="20" height="6" fill="#1d1f22"/>
+    <path d="M190 352 Q190 340 200 332 Q210 340 210 352 Z" fill="#f2f1ea"/>
+    <circle cx="200" cy="372" r="4" fill="#1d1f22"/>
   </g>
 
-  <!-- exhaust clouds at the pad -->
+  <!-- the burst of air at launch -->
   <g fill="#cfd3d7">
-    <circle class="puff" cx="176" cy="438" r="14"/>
-    <circle class="puff" cx="224" cy="438" r="14"/>
-    <circle class="puff" cx="200" cy="442" r="16"/>
-    <circle class="puff" cx="154" cy="444" r="11"/>
-    <circle class="puff" cx="246" cy="444" r="11"/>
+    <circle class="burst" cx="186" cy="438" r="11"/>
+    <circle class="burst" cx="214" cy="438" r="11"/>
+    <circle class="burst" cx="200" cy="442" r="13"/>
+    <circle class="burst" cx="200" cy="430" r="9"/>
+  </g>
+  <g class="whoosh" stroke="#f2f1ea" stroke-width="3" stroke-linecap="round">
+    <path d="M168 414 L156 396"/>
+    <path d="M232 414 L244 396"/>
+    <path d="M176 400 L170 384"/>
+    <path d="M224 400 L230 384"/>
   </g>
 </svg>

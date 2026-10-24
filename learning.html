@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Rust · Harshan Kamesh</title>
+  <meta name="description" content="What Harshan Kamesh is learning right now: the Rust programming language.">
+  <meta name="theme-color" content="#f2f1ea">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Bodoni+Moda:opsz,wght@6..96,400..600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('failsafe')},2500)</script>
+</head>
+<body>
+
+<header class="bar">
+  <a class="brand" href="index.html" aria-label="Harshan Kamesh, home"><span class="serif">Harshan</span><span class="sans">Kamesh</span></a>
+  <div class="bar-right">
+    <a class="pill" href="index.html#resume">Résumé</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="menu" id="menu" aria-label="Main" hidden>
+  <ul>
+    <li><a href="index.html"><span class="serif">Back</span> Home</a></li>
+    <li><a href="index.html#awards"><span class="serif">My</span> Awards</a></li>
+    <li><a href="index.html#projects"><span class="serif">Things</span> I made</a></li>
+    <li><a href="index.html#resume"><span class="serif">My</span> Résumé</a></li>
+    <li><a href="#contact"><span class="serif">Say</span> Hello</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section class="l-hero">
+    <h1><span class="serif">Now learning</span> <span class="sans">Rust</span></h1>
+    <div class="l-intro">
+      <p>Right now I'm teaching myself Rust, a programming language. This page is where I keep track of what I'm learning and the small programs I'm working through.</p>
+      <a class="pill pill-lg" href="index.html">Back to home</a>
+    </div>
+  </section>
+
+  <section class="l-block" aria-labelledby="why-h">
+    <h2 id="why-h"><span class="serif">Why</span> Rust</h2>
+    <div class="l-body">
+      <p class="reveal">Rust is a programming language that runs as fast as C and C++, but checks your code for whole families of memory bugs before the program ever runs. That's why it shows up in places where speed and reliability both matter, from web browsers to operating systems.</p>
+      <p class="reveal">I want to understand how a language can be fast and safe at the same time. I also like how the Rust compiler works: when something is wrong, it explains exactly what and often suggests the fix, which feels a lot like having a good teacher.</p>
+    </div>
+  </section>
+
+  <section class="l-block" aria-labelledby="ideas-h">
+    <h2 id="ideas-h"><span class="serif">What I'm</span> learning</h2>
+    <ul class="l-body l-list">
+      <li class="reveal"><b>Ownership</b><p>Every value in Rust has exactly one owner. When the owner goes out of scope, the value is cleaned up automatically, with no garbage collector running in the background.</p></li>
+      <li class="reveal"><b>Borrowing</b><p>Instead of handing a value over, you can lend it with a reference. You can have many read-only references or one mutable reference at a time, never both, and the compiler checks this for you.</p></li>
+      <li class="reveal"><b>Option and Result</b><p>Rust has no null. A value that might be missing is an Option, and an operation that might fail returns a Result, so you have to deal with both cases on purpose.</p></li>
+      <li class="reveal"><b>Pattern matching</b><p>The match keyword checks a value against every possible shape it could take, and the compiler complains if you forget one.</p></li>
+      <li class="reveal"><b>Cargo</b><p>Rust's build tool and package manager. One command creates a project, another builds and runs it.</p></li>
+    </ul>
+  </section>
+
+  <section class="l-block" aria-labelledby="code-h">
+    <h2 id="code-h"><span class="serif">Programs I'm</span> working through</h2>
+    <div class="l-body">
+      <figure class="l-figure reveal">
+        <pre><code><span class="k">fn</span> <span class="f">main</span>() {
+    <span class="k">let</span> name = <span class="t">String</span>::<span class="f">from</span>(<span class="s">"Harshan"</span>);
+    <span class="k">let</span> owner = name;       <span class="c">// ownership moves to `owner`</span>
+    <span class="c">// println!("{name}");  // error: `name` was moved</span>
+    <span class="f">println!</span>(<span class="s">"Hi, I'm {owner}"</span>);
+}</code></pre>
+        <figcaption>Ownership. After <code>let owner = name;</code> the string belongs to <code>owner</code>, so using <code>name</code> again is a compile error rather than a bug at runtime.</figcaption>
+      </figure>
+
+      <figure class="l-figure reveal">
+        <pre><code><span class="k">fn</span> <span class="f">length</span>(s: &amp;<span class="t">String</span>) -&gt; <span class="t">usize</span> {
+    s.<span class="f">len</span>()
+}
+
+<span class="k">fn</span> <span class="f">main</span>() {
+    <span class="k">let</span> name = <span class="t">String</span>::<span class="f">from</span>(<span class="s">"Harshan"</span>);
+    <span class="k">let</span> n = <span class="f">length</span>(&amp;name);   <span class="c">// lend it, don't give it away</span>
+    <span class="f">println!</span>(<span class="s">"{name} has {n} letters"</span>);
+}</code></pre>
+        <pre class="l-out"><samp>Harshan has 7 letters</samp></pre>
+        <figcaption>Borrowing. <code>&amp;name</code> lends the string to <code>length</code>, so <code>main</code> still owns it and can print it afterwards.</figcaption>
+      </figure>
+
+      <figure class="l-figure reveal">
+        <pre><code><span class="c">// a + ar + ar² + … for the first n terms</span>
+<span class="k">fn</span> <span class="f">geometric_sum</span>(a: <span class="t">f64</span>, r: <span class="t">f64</span>, n: <span class="t">u32</span>) -&gt; <span class="t">f64</span> {
+    (<span class="n">0</span>..n).<span class="f">map</span>(|k| a * r.<span class="f">powi</span>(k <span class="k">as</span> <span class="t">i32</span>)).<span class="f">sum</span>()
+}
+
+<span class="k">fn</span> <span class="f">main</span>() {
+    <span class="k">let</span> s = <span class="f">geometric_sum</span>(<span class="n">0.5</span>, <span class="n">0.5</span>, <span class="n">20</span>);
+    <span class="f">println!</span>(<span class="s">"1/2 + 1/4 + ... = {s:.6}"</span>);
+}</code></pre>
+        <pre class="l-out"><samp>1/2 + 1/4 + ... = 0.999999</samp></pre>
+        <figcaption>Math meets Rust. The same geometric series from precalculus: twenty terms of ½ + ¼ + ⅛ + … already land within a millionth of 1.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="l-block" aria-labelledby="follow-h">
+    <h2 id="follow-h"><span class="serif">Follow</span> along</h2>
+    <div class="l-body">
+      <p class="reveal">I'll keep adding to this page as I learn. My code lives on GitHub.</p>
+      <p class="reveal"><a class="pill pill-lg" href="https://github.com/hkamesh476">My GitHub</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer dark" id="contact">
+  <div class="foot-top">
+    <h2 class="title"><span class="serif">Say</span> <span class="sans">Hello</span></h2>
+    <a class="foot-mail" href="mailto:hkamesh8@gmail.com">hkamesh8@gmail.com</a>
+    <div class="foot-links">
+      <a class="pill" href="mailto:hkamesh8@gmail.com?subject=Hi%20Harshan">Email me</a>
+      <a class="pill pill-ghost" href="https://www.linkedin.com/in/harshan-kamesh-7a2458320">LinkedIn</a>
+      <a class="pill pill-ghost" href="https://github.com/hkamesh476">GitHub</a>
+      <a class="pill pill-ghost" href="index.html">Home</a>
+    </div>
+  </div>
+  <p class="foot-mark" aria-label="Harshan Kamesh"><span class="serif">Harshan</span> <span class="sans">Kamesh</span></p>
+  <div class="foot-legal">
+    <p>© <span id="year">2026</span> Harshan Kamesh, Monroe Township, NJ</p>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>

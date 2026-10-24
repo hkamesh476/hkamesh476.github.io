@@ -3,7 +3,8 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   requestAnimationFrame(() => root.classList.add('ready'));
-  document.getElementById('year').textContent = new Date().getFullYear();
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
 
   /* ---------- Menu ---------- */
   const menuBtn = document.querySelector('.menu-btn');
@@ -104,8 +105,8 @@
   const setCurrent = (a) => {
     names.forEach((n) => n.classList.toggle('is-current', n === a));
     pics.forEach((p) => p.classList.toggle('is-on', p.dataset.key === a.dataset.key));
-    kind.textContent = a.dataset.kind;
-    role.textContent = a.dataset.role;
+    if (kind) kind.textContent = a.dataset.kind;
+    if (role) role.textContent = a.dataset.role;
   };
   if (names.length) {
     setCurrent(names[0]);
@@ -116,8 +117,11 @@
   }
 
   /* ---------- Résumé ---------- */
-  document.getElementById('print').addEventListener('click', () => {
-    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
-    print();
-  });
+  const printBtn = document.getElementById('print');
+  if (printBtn) {
+    printBtn.addEventListener('click', () => {
+      document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
+      print();
+    });
+  }
 })();
