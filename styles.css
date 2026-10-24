@@ -217,8 +217,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 }
 .c-carnival figcaption { margin-top: 12px; max-width: 60ch; color: var(--muted); }
 .c-quote { grid-column: 2 / span 5; }
-.c-quote p:first-child { font: 400 clamp(1.5rem, 1rem + 1.6vw, 2.75rem)/1.15 var(--serif); }
-.c-quote strong { font-weight: 600; }
+.c-quote .q-text { font: 800 clamp(1.75rem, 1rem + 2.2vw, 3.25rem)/1 var(--sans); font-stretch: 112%; text-transform: uppercase; letter-spacing: -0.02em; }
+.c-quote .q-hot { color: var(--papaya); }
 .c-a { grid-column: 8 / span 4; }
 .c-a img { aspect-ratio: 4 / 5; }
 
@@ -278,6 +278,7 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .team { padding: 0 var(--m) calc(var(--section) * .6); display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); }
 .team-pic { grid-column: 2 / span 10; }
 .team-pic img { width: 100%; aspect-ratio: 1001 / 566; object-fit: cover; }
+.team-h .school { color: #5b2a8e; } /* Monroe Township school purple */
 .team-h { margin-bottom: clamp(20px, 3vw, 40px); font-size: clamp(2.75rem, 1rem + 5vw, 7rem); }
 .team-pic figcaption { margin-top: 12px; max-width: 64ch; color: var(--muted); }
 @media (max-width: 700px) { .team-pic { grid-column: 1 / -1; } }
