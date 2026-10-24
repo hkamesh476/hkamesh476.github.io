@@ -325,6 +325,8 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .lt-text { grid-column: 1 / span 6; display: grid; gap: 20px; justify-items: start; }
 .lt-text p:not(.tiny) { max-width: 48ch; color: var(--on-dark-muted); }
 .lt-code { grid-column: 8 / -1; }
+.c-cite { margin-top: 18px; font: 700 .9375rem/1.3 var(--sans); color: var(--muted); }
+.c-cite cite { font-style: normal; color: var(--papaya-ink); text-transform: uppercase; letter-spacing: .03em; }
 .title-link { text-decoration: none; }
 .title-link .sans { transition: color .25s; }
 .title-link:hover .sans { color: var(--papaya); }
