@@ -325,6 +325,12 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .lt-text { grid-column: 1 / span 6; display: grid; gap: 20px; justify-items: start; }
 .lt-text p:not(.tiny) { max-width: 48ch; color: var(--on-dark-muted); }
 .lt-code { grid-column: 8 / -1; }
+.title-link { text-decoration: none; }
+.title-link .sans { transition: color .25s; }
+.title-link:hover .sans { color: var(--papaya); }
+.lt-text p a, .begonia-text p a { color: inherit; text-decoration-color: var(--papaya); text-decoration-thickness: 2px; transition: color .2s; }
+.lt-text p a { color: var(--on-dark); }
+.lt-text p a:hover, .begonia-text p a:hover { color: var(--papaya); }
 
 /* Code blocks: the one place monospace belongs */
 pre {
