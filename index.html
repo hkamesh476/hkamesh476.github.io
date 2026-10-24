@@ -7,8 +7,8 @@
   <meta name="description" content="Harshan Kamesh — student at Monroe Township High School, NJ. Math teacher, builder of the Bank of Begonia, school cricketer and McLaren fan.">
   <meta property="og:title" content="Harshan Kamesh">
   <meta property="og:description" content="Awards, projects, sport and résumé.">
-  <meta property="og:image" content="assets/mclaren-mp4.jpg">
-  <meta name="theme-color" content="#FF8000">
+  <meta property="og:image" content="assets/harshan.webp">
+  <meta name="theme-color" content="#121416">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,7 +36,7 @@
     <div class="hero-center">
       <h1 class="monument">
         <span class="word">Harshan</span>
-        <span class="slot" aria-hidden="true"><img src="assets/mclaren-mp4.jpg" alt="" width="1920" height="1438" fetchpriority="high"></span>
+        <span class="slot" aria-hidden="true"><img src="assets/mclaren-team.webp" alt="" width="1080" height="1080" fetchpriority="high"></span>
         <span class="word">Kamesh</span>
       </h1>
       <div class="hero-foot">
@@ -100,8 +100,8 @@
     </div>
 
     <figure class="awards-pic reveal">
-      <video src="assets/rocket-clip.webm" poster="assets/rocket-clip-poster.jpg" width="608" height="1080" muted loop playsinline autoplay preload="metadata" aria-label="Three model rockets launching from a field"></video>
-      <figcaption>Model rockets leaving the pad.</figcaption>
+      <img src="assets/rocket-launch.svg" alt="An animated papaya model rocket lifting off its launch rail" width="400" height="500">
+      <figcaption>Lift-off, on repeat.</figcaption>
     </figure>
   </section>
 
@@ -111,9 +111,9 @@
       <h2 id="work-h" class="section-h work-head reveal">Things I made</h2>
       <ul class="work-list">
       <li>
-        <a class="work-name" href="#begonia" data-key="carnival" data-kind="Founder" data-role="Started it">Community carnival</a>
+        <a class="work-name" href="#carnival" data-key="carnival" data-kind="Founder" data-role="Started it">Community carnival</a>
         <p class="work-meta">Founder. I started it.</p>
-        <img class="work-inline" src="assets/carnival-lights.jpg" alt="Carnival lights at night above a fairground" loading="lazy">
+        <img class="work-inline" src="assets/carnival-2026.jpg" alt="My neighbours gathered on our street for Carnival 2026" loading="lazy">
       </li>
       <li>
         <a class="work-name" href="#begonia" data-key="begonia" data-kind="Lead product developer" data-role="Built it">Bank of Begonia</a>
@@ -133,22 +133,31 @@
       <li>
         <a class="work-name" href="#awards" data-key="rocketry" data-kind="Rocketry" data-role="P3, 9th grade">Rocketry</a>
         <p class="work-meta">Third place, 9th grade.</p>
-        <img class="work-inline" src="assets/rocket-clip-poster.jpg" alt="A model rocket climbing away from its launch rail" loading="lazy">
+        <img class="work-inline" src="assets/rocket-launch.svg" alt="An animated model rocket lifting off" loading="lazy">
       </li>
       </ul>
     </div>
     <div class="work-side" aria-hidden="true">
       <div class="work-stage">
         <div class="work-frame">
-          <img class="is-on" data-key="carnival" src="assets/carnival-lights.jpg" alt="" loading="lazy">
+          <img class="is-on" data-key="carnival" src="assets/carnival-2026.jpg" alt="" loading="lazy">
           <img data-key="begonia" src="assets/carnival-tickets.jpg" alt="" loading="lazy">
           <img data-key="mathcorp" src="assets/geometry-lessons.jpg" alt="" loading="lazy">
           <img data-key="temple" src="assets/rupee.jpg" alt="" loading="lazy">
-          <img data-key="rocketry" src="assets/rocket-clip-poster.jpg" alt="" loading="lazy">
+          <img data-key="rocketry" src="assets/rocket-launch.svg" alt="" loading="lazy">
         </div>
         <p class="work-facts"><span data-fact="kind">Founder</span><span data-fact="role">Started it</span></p>
       </div>
     </div>
+  </section>
+
+  <!-- ============ CARNIVAL 2026 ============ -->
+  <section class="carnival" id="carnival" aria-labelledby="carnival-h">
+    <figure class="carnival-pic">
+      <img src="assets/carnival-2026.jpg" alt="Over a hundred neighbours sitting and standing together on our street in front of the carnival tents" width="1215" height="911" loading="lazy">
+      <h2 id="carnival-h" class="carnival-h">Carnival 2026</h2>
+    </figure>
+    <p class="carnival-cap wrap"><span>The whole street turned out. I started this carnival for my community, and every ticket spent at it went through the Bank of Begonia.</span></p>
   </section>
 
   <!-- ============ BANK OF BEGONIA: the live demo ============ -->
@@ -157,7 +166,9 @@
       <h2 id="begonia-h" class="section-h reveal">Bank of Begonia</h2>
       <p class="reveal">I started a carnival for my community, and then built the ticket system it runs on. Bank of Begonia is a small bank for carnival tickets: every visitor has a QR wallet, stalls scan it to charge tickets, friends can send tickets to each other, and a central server keeps every balance straight.</p>
       <p class="reveal">Organizers and stall owners see live numbers for every stall, so they know where the crowd is and when to restock.</p>
-      <p class="reveal">Try it: you have 20 tickets. Spend them, send some to a friend, and watch the organizer's board.</p>
+      <p class="reveal">Bank of Begonia is open to everyone: you can sign up for your own wallet today.</p>
+      <p class="reveal"><a class="btn" href="https://cc.teabreaktech.com">Sign up for Bank of Begonia</a></p>
+      <p class="reveal">Or try it right here: you have 20 tickets. Spend them, send some to a friend, and watch the organizer's board.</p>
       <figure class="begonia-plate reveal">
         <img src="assets/begonia.jpg" alt="An eighteenth-century botanical engraving of a pink begonia" width="1920" height="2601" loading="lazy">
         <figcaption>The flower the bank is named after, in an old botanical engraving.</figcaption>
@@ -198,15 +209,18 @@
 
   <!-- ============ ABOUT ============ -->
   <section class="about wrap" id="about" aria-labelledby="about-h">
-    <div class="about-facts reveal">
-      <h2 id="about-h" class="about-h">About me</h2>
-      <p>Monroe Township, NJ</p>
-      <p>Monroe Township High School</p>
-      <p><a href="#contact">How to reach me</a></p>
-    </div>
+    <figure class="about-pic reveal">
+      <img src="assets/harshan.webp" alt="Harshan Kamesh, smiling, in a blue tuxedo and bow tie" width="800" height="800" loading="lazy">
+    </figure>
     <div class="about-text">
-      <p class="statement reveal"><img class="dropcap" src="assets/cricket-bat-ball.jpg" alt="A cricket bat and a red cricket ball" width="1920" height="1281" loading="lazy"><strong>I'm Harshan Kamesh.</strong> I like problems with numbers in them.</p>
+      <h2 id="about-h" class="section-h reveal">About me</h2>
+      <p class="statement reveal"><strong>I'm Harshan Kamesh.</strong> I like problems with numbers in them.</p>
       <p class="about-body reveal">I like explaining them even more. I teach math to middle schoolers, I've taught economics to kids and adults, and I started a carnival and built the bank that runs it. When I'm not doing that, I'm at cricket practice with my school team, or watching McLaren on a Sunday.</p>
+      <ul class="about-facts reveal">
+        <li>Monroe Township, NJ</li>
+        <li>Monroe Township High School</li>
+        <li><a href="#contact">How to reach me</a></li>
+      </ul>
     </div>
   </section>
 
@@ -218,8 +232,8 @@
     </div>
     <div class="wrap gallery">
       <figure class="g g1 reveal"><img src="assets/mclaren-mp4.jpg" alt="A white and red 1982 McLaren MP4/1 Formula 1 car on display" width="1920" height="1438" loading="lazy"><figcaption>McLaren MP4/1, 1982.</figcaption></figure>
-      <figure class="g g2 reveal"><img src="assets/cricket-match.jpg" alt="A cricket match on a sunny field behind a white picket fence" width="1920" height="1277" loading="lazy"><figcaption>A Saturday match, picket fence and all.</figcaption></figure>
-      <figure class="g g3 reveal"><img src="assets/mclaren-cars.jpg" alt="A row of 1990s McLaren Formula 1 cars, number 7 in front" width="1920" height="1280" loading="lazy"><figcaption>McLaren MP4-10B and its older siblings.</figcaption></figure>
+      <figure class="g g2 reveal"><img src="assets/mclaren-team.webp" alt="McLaren's drivers and pit crew in papaya race suits around the car in the pit lane" width="1080" height="1080" loading="lazy"><figcaption>My team, in papaya.</figcaption></figure>
+      <figure class="g g3 reveal"><img src="assets/cricket-match.jpg" alt="A cricket match on a sunny field behind a white picket fence" width="1920" height="1277" loading="lazy"><figcaption>A Saturday match, picket fence and all.</figcaption></figure>
       <figure class="g g4 reveal"><img src="assets/cricket-rowlandson.jpg" alt="Thomas Rowlandson's comic print of a cricket match" width="1920" height="1374" loading="lazy"><figcaption>Cricket in 1811, by Thomas Rowlandson.</figcaption></figure>
     </div>
   </section>
@@ -241,7 +255,7 @@
       <li class="job reveal" id="r-begonia">
         <h3>Bank of Begonia</h3>
         <p class="job-role">Lead product developer</p>
-        <p>A ticket-based mini bank for carnivals and events. QR codes and a central server let visitors receive, spend and transfer digital tickets securely, and give organizers and stall owners live statistics.</p>
+        <p>A ticket-based mini bank for carnivals and events, open for anyone to <a href="https://cc.teabreaktech.com">sign up</a>. QR codes and a central server let visitors receive, spend and transfer digital tickets securely, and give organizers and stall owners live statistics.</p>
       </li>
       <li class="job reveal" id="r-temple">
         <h3>Balaji Temple, Monroe</h3>
@@ -293,13 +307,9 @@
     </div>
     <div class="foot-credits">
       <p class="foot-first">Pictures</p>
-      <p class="credits">From Wikimedia Commons:
+      <p class="credits">Photos of me and Carnival 2026 are my own. McLaren team photo: McLaren Racing. Others from Wikimedia Commons:
         <a href="https://commons.wikimedia.org/w/index.php?curid=2634198">McLaren MP4</a> by John Chapman, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>;
-        <a href="https://commons.wikimedia.org/w/index.php?curid=108155444">McLaren Formula One Cars</a> by Darren Garlick, CC0;
-        <a href="https://commons.wikimedia.org/wiki/File:Modelrocketlaunch.webm">Model rocket launch video</a> by Raketenbauer, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>;
         <a href="https://commons.wikimedia.org/w/index.php?curid=39768183">Cootamundra cricket match</a> by Mattinbgn, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>;
-        <a href="https://commons.wikimedia.org/w/index.php?curid=24189896">Bat and ball</a> by Marie-Lan Nguyen, <a href="https://creativecommons.org/licenses/by/2.5/">CC BY 2.5</a>;
-        <a href="https://commons.wikimedia.org/w/index.php?curid=189481690">Nighttime carnival lights</a> by PattayaPatrol, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>;
         <a href="https://commons.wikimedia.org/w/index.php?curid=56702014">Carnival ride tickets booth</a> by Corey Coyle, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>;
         <a href="https://commons.wikimedia.org/w/index.php?curid=184847763">The Oblique-leaved Begonia</a> by James Caldwall after Philip Reinagle, CC0;
         <a href="https://commons.wikimedia.org/wiki/File:Geometry_Lessons.jpg">Geometry Lessons</a> by KUHT, public domain;

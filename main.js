@@ -80,7 +80,7 @@
     }
     finder(0, 0); finder(18, 0); finder(0, 18);
     qr.innerHTML = cells.map(([x, y, w, h, t]) => t === 'o'
-      ? `<rect x="${x}" y="${y}" width="${w}" height="${h}"/><rect x="${x + 1}" y="${y + 1}" width="${w - 2}" height="${h - 2}" style="fill:var(--bg)"/>`
+      ? `<rect x="${x}" y="${y}" width="${w}" height="${h}"/><rect x="${x + 1}" y="${y + 1}" width="${w - 2}" height="${h - 2}" style="fill:#fff"/>`
       : `<rect x="${x}" y="${y}" width="${w}" height="${h}"/>`).join('');
   };
 

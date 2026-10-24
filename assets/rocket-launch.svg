@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="A papaya model rocket lifting off its launch rail">
+  <style>
+    .rocket { animation: climb 6s infinite; }
+    .flame { transform-box: fill-box; transform-origin: 50% 0; opacity: 0; animation: burn 6s infinite; }
+    .flicker { transform-box: fill-box; transform-origin: 50% 0; animation: flicker .12s infinite alternate; }
+    .trail { transform-box: fill-box; transform-origin: 50% 100%; transform: scaleY(0); animation: trail 6s infinite; }
+    .puff { transform-box: fill-box; transform-origin: 50% 50%; opacity: 0; animation: puff 6s infinite; }
+    .puff:nth-of-type(2) { animation-delay: .08s; }
+    .puff:nth-of-type(3) { animation-delay: .16s; }
+    .puff:nth-of-type(4) { animation-delay: .24s; }
+    .puff:nth-of-type(5) { animation-delay: .32s; }
+    .star { animation: twinkle 3s infinite alternate; }
+    .star:nth-child(2n) { animation-delay: 1.4s; }
+
+    @keyframes climb {
+      0% { transform: translateY(0); opacity: 0; }
+      6%, 26% { transform: translateY(0); opacity: 1; animation-timing-function: cubic-bezier(.55, 0, .9, .55); }
+      72% { transform: translateY(-480px); opacity: 1; }
+      100% { transform: translateY(-480px); opacity: 0; }
+    }
+    @keyframes burn {
+      0%, 20% { opacity: 0; transform: scaleY(.2); }
+      24% { opacity: 1; transform: scaleY(1); }
+      72% { opacity: 1; transform: scaleY(1.3); }
+      74%, 100% { opacity: 0; }
+    }
+    @keyframes flicker { from { transform: scaleY(.85) scaleX(.95); } to { transform: scaleY(1.12) scaleX(1.05); } }
+    @keyframes trail {
+      0%, 26% { transform: scaleY(0); opacity: .55; animation-timing-function: cubic-bezier(.55, 0, .9, .55); }
+      72% { transform: scaleY(1); opacity: .55; }
+      96%, 100% { transform: scaleY(1); opacity: 0; }
+    }
+    @keyframes puff {
+      0%, 20% { opacity: 0; transform: scale(.2); }
+      26% { opacity: .9; transform: scale(1); }
+      60% { opacity: .5; transform: scale(2.1); }
+      90%, 100% { opacity: 0; transform: scale(2.6); }
+    }
+    @keyframes twinkle { from { opacity: .25; } to { opacity: .8; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rocket, .flame, .flicker, .trail, .puff, .star { animation: none; }
+      .rocket { opacity: 1; }
+    }
+  </style>
+
+  <!-- night sky -->
+  <rect width="400" height="500" fill="#1a1d21"/>
+  <g fill="#ececec">
+    <circle class="star" cx="52" cy="60" r="1.6"/>
+    <circle class="star" cx="118" cy="132" r="1.2"/>
+    <circle class="star" cx="330" cy="48" r="1.8"/>
+    <circle class="star" cx="288" cy="150" r="1.2"/>
+    <circle class="star" cx="360" cy="240" r="1.4"/>
+    <circle class="star" cx="40" cy="220" r="1.2"/>
+    <circle class="star" cx="250" cy="90" r="1"/>
+    <circle class="star" cx="80" cy="330" r="1"/>
+  </g>
+
+  <!-- the field -->
+  <rect y="446" width="400" height="54" fill="#22271f"/>
+  <rect y="446" width="400" height="4" fill="#2e3529"/>
+
+  <!-- smoke trail behind the rocket -->
+  <rect class="trail" x="193" y="-60" width="14" height="500" rx="7" fill="#cfd3d7"/>
+
+  <!-- launch rail and pad -->
+  <rect x="150" y="436" width="100" height="10" fill="#3a3f45"/>
+  <rect x="198.5" y="250" width="3" height="188" fill="#8a9097"/>
+  <path d="M200 436 L170 446 M200 436 L230 446" stroke="#8a9097" stroke-width="3"/>
+
+  <!-- the rocket -->
+  <g class="rocket">
+    <g class="flame">
+      <g class="flicker">
+        <path d="M188 420 Q200 492 212 420 Z" fill="#ffd166"/>
+        <path d="M193 420 Q200 470 207 420 Z" fill="#ff8000"/>
+      </g>
+    </g>
+    <path d="M182 404 L170 426 L188 420 Z" fill="#c25e00"/>
+    <path d="M218 404 L230 426 L212 420 Z" fill="#c25e00"/>
+    <rect x="188" y="320" width="24" height="100" fill="#ff8000"/>
+    <rect x="188" y="396" width="24" height="7" fill="#121416"/>
+    <path d="M188 320 Q188 290 200 278 Q212 290 212 320 Z" fill="#ececec"/>
+    <circle cx="200" cy="344" r="5" fill="#121416"/>
+    <circle cx="200" cy="344" r="2.5" fill="#8fd3ff"/>
+  </g>
+
+  <!-- exhaust clouds at the pad -->
+  <g fill="#cfd3d7">
+    <circle class="puff" cx="176" cy="438" r="14"/>
+    <circle class="puff" cx="224" cy="438" r="14"/>
+    <circle class="puff" cx="200" cy="442" r="16"/>
+    <circle class="puff" cx="154" cy="444" r="11"/>
+    <circle class="puff" cx="246" cy="444" r="11"/>
+  </g>
+</svg>
