@@ -8,133 +8,172 @@
   <meta property="og:title" content="Harshan Kamesh">
   <meta property="og:description" content="Awards, projects, sport and résumé.">
   <meta property="og:image" content="assets/harshan.webp">
-  <meta name="theme-color" content="#121416">
+  <meta name="theme-color" content="#f2f1ea">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Bodoni+Moda:opsz,wght@6..96,400..600&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add('js');setTimeout(function(){document.documentElement.classList.add('failsafe')},2500)</script>
 </head>
 <body>
+
+<!-- ============ TOP BAR ============ -->
+<header class="bar">
+  <a class="brand" href="#top" aria-label="Harshan Kamesh, back to top"><span class="serif">Harshan</span><span class="sans">Kamesh</span></a>
+  <div class="bar-right">
+    <a class="pill" href="#resume">Résumé</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<nav class="menu" id="menu" aria-label="Main" hidden>
+  <ul>
+    <li><a href="#awards"><span class="serif">My</span> Awards</a></li>
+    <li><a href="#projects"><span class="serif">Things</span> I made</a></li>
+    <li><a href="#carnival"><span class="serif">Carnival</span> 2026</a></li>
+    <li><a href="#sport"><span class="serif">On</span> Track</a></li>
+    <li><a href="#resume"><span class="serif">My</span> Résumé</a></li>
+    <li><a href="#contact"><span class="serif">Say</span> Hello</a></li>
+  </ul>
+</nav>
+
 <main>
 
   <!-- ============ HERO ============ -->
-  <header class="hero" id="top">
-    <nav class="nav" aria-label="Main">
-      <a class="nav-mark" href="#top" aria-label="Harshan Kamesh, back to top">HK</a>
-      <ul class="nav-links">
-        <li><a href="#awards">Awards</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#sport">Sport</a></li>
-        <li><a href="#resume">Résumé</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <a class="nav-short" href="#resume">Résumé</a>
-    </nav>
-
-    <div class="hero-center">
-      <h1 class="monument">
-        <span class="word">Harshan</span>
-        <span class="slot" aria-hidden="true"><img src="assets/mclaren-team.webp" alt="" width="1080" height="1080" fetchpriority="high"></span>
-        <span class="word">Kamesh</span>
-      </h1>
-      <div class="hero-foot">
-        <p class="hero-line">Student at Monroe Township High School, New Jersey. I teach math, build things for my community and play cricket for my school.</p>
-        <a class="btn" href="#awards">See my awards</a>
-      </div>
+  <section class="hero" id="top">
+    <h1 class="hero-name">
+      <span class="serif line1">Harshan</span>
+      <span class="sans line2">Kamesh</span>
+    </h1>
+    <figure class="hero-pic">
+      <img src="assets/harshan.webp" alt="Harshan Kamesh, smiling, in a blue tuxedo and bow tie" width="800" height="800" fetchpriority="high">
+    </figure>
+    <p class="hero-sign" aria-hidden="true">Harshan</p>
+    <div class="hero-foot">
+      <p class="hero-line">Student at Monroe Township High School, New Jersey. I teach math, build things for my community and play cricket for my school.</p>
+      <a class="pill pill-lg" href="#awards">See my awards</a>
     </div>
-  </header>
-
-  <!-- ============ INTRO: the season so far ============ -->
-  <section class="intro wrap" aria-labelledby="intro-h">
-    <div class="intro-top">
-      <h2 id="intro-h" class="intro-h reveal">The season so far</h2>
-      <p class="intro-note reveal">Math and economics are what I want to study. Teaching, building and competing are how I've practised them.</p>
+    <div class="now-card">
+      <p class="tiny">Right now</p>
+      <p class="now-big">11th grade</p>
+      <p class="tiny">Monroe Township High School</p>
     </div>
-    <ul class="facts">
-      <li class="reveal"><strong>Excellence</strong><span>in Teaching Award, MathCORP</span></li>
-      <li class="reveal"><strong>P3</strong><span>Rocketry competition, 9th grade</span></li>
-      <li class="reveal"><strong>1 carnival</strong><span>started in my community</span></li>
-      <li class="reveal"><strong>8 weeks</strong><span>teaching economics, ages 12–19</span></li>
+  </section>
+
+  <!-- ============ MESSAGE (dark) ============ -->
+  <section class="message dark" aria-labelledby="message-h">
+    <p class="tiny center" aria-hidden="true">A message from Harshan</p>
+    <h2 id="message-h" class="visually-hidden">A message from Harshan</h2>
+    <p class="statement-big" data-words>
+      <span class="serif hl">Teaching</span> math, <span class="serif hl">building</span> for my community and chasing the <span class="serif hl">podium</span>, in class and out of it.
+    </p>
+    <p class="sign center" aria-hidden="true">Harshan</p>
+  </section>
+
+  <!-- ============ AWARDS ============
+       To add an award: copy one <li class="award"> block and change the text.
+       Put the result (P1, P2, P3, Win…) in <span class="award-pos">. -->
+  <section class="awards" id="awards" aria-labelledby="awards-h">
+    <div class="awards-head">
+      <h2 id="awards-h" class="title"><span class="serif">My</span> <span class="sans">Awards</span></h2>
+      <p class="awards-intro">Results so far. More on the way.</p>
+    </div>
+    <div class="awards-grid">
+      <ol class="award-list">
+        <li class="award reveal">
+          <span class="award-pos serif">Win</span>
+          <div>
+            <h3 class="award-name">Excellence in Teaching</h3>
+            <p class="award-meta">MathCORP, teaching assistant</p>
+            <p>Given for outstanding performance and dedication to student progress. I guided 8th graders through Algebra II and into precalculus, and wrote my own geometry lessons on SOHCAHTOA and special right triangles.</p>
+          </div>
+        </li>
+        <li class="award reveal">
+          <span class="award-pos serif">P3</span>
+          <div>
+            <h3 class="award-name">Rocketry competition</h3>
+            <p class="award-meta">Third place, 9th grade</p>
+            <p>My first podium.</p>
+          </div>
+        </li>
+        <!-- Template for the next award:
+        <li class="award reveal">
+          <span class="award-pos serif">P1</span>
+          <div>
+            <h3 class="award-name">Name of the award</h3>
+            <p class="award-meta">Who gave it, year or grade</p>
+            <p>One or two sentences on what you did.</p>
+          </div>
+        </li>
+        -->
+      </ol>
+      <figure class="rocket-card reveal">
+        <p class="tiny">Rocketry, 9th grade</p>
+        <img src="assets/rocket-launch.svg" alt="An animated papaya model rocket lifting off its launch rail" width="400" height="500">
+      </figure>
+    </div>
+
+    <h3 class="certs-h"><span class="serif">My</span> <span class="sans">Certifications</span></h3>
+    <!-- To add a certification, delete the "on their way" line and copy the <li> template. -->
+    <ul class="certs">
+      <li class="certs-empty">Certifications are on their way to this page.</li>
+      <!-- <li><span class="cert-name">Certification name</span><span class="cert-by">Issuer, year</span></li> -->
     </ul>
   </section>
 
-  <!-- ============ AWARDS & CERTIFICATIONS ============
-       To add an award: copy one <details class="bar"> block and change the text.
-       Put the result (P1, P2, P3, Winner, Award…) in <b class="pos">. -->
-  <section class="awards wrap" id="awards" aria-labelledby="awards-h">
-    <div class="awards-col">
-      <h2 id="awards-h" class="giant reveal">Awards</h2>
-      <div class="bars">
-        <details class="bar reveal" open>
-          <summary><b class="pos">Award</b><span class="bar-name">Excellence in Teaching</span><span class="plus" aria-hidden="true"></span></summary>
-          <div class="bar-panel">
-            <p><strong>MathCORP</strong>, teaching assistant</p>
-            <p>Given for outstanding performance and dedication to student progress. I guided 8th graders through Algebra II and into precalculus, and wrote my own geometry lessons on SOHCAHTOA and special right triangles.</p>
-          </div>
-        </details>
-        <details class="bar reveal">
-          <summary><b class="pos">P3</b><span class="bar-name">Rocketry competition</span><span class="plus" aria-hidden="true"></span></summary>
-          <div class="bar-panel">
-            <p>My first podium: third place in a rocketry competition in 9th grade.</p>
-          </div>
-        </details>
-        <!-- Template for the next award:
-        <details class="bar reveal">
-          <summary><b class="pos">P1</b><span class="bar-name">Name of the award</span><span class="plus" aria-hidden="true"></span></summary>
-          <div class="bar-panel">
-            <p><strong>Who gave it</strong>, year or grade</p>
-            <p>One or two sentences on what you did.</p>
-          </div>
-        </details>
-        -->
+  <!-- ============ CARNIVAL 2026 + COLLAGE ============ -->
+  <section class="collage" id="carnival" aria-labelledby="carnival-h">
+    <figure class="c-item c-carnival" data-speed="0">
+      <p class="tiny">Monroe Township, summer 2026</p>
+      <div class="carnival-wrap">
+        <img src="assets/carnival-2026.jpg" alt="Over a hundred neighbours together on our street in front of the carnival tents" width="1215" height="911" loading="lazy">
+        <h2 id="carnival-h" class="carnival-h">Carnival 2026</h2>
       </div>
-
-      <h3 class="certs-h reveal">Certifications</h3>
-      <!-- To add a certification, copy one <li> and change the text. -->
-      <ul class="certs">
-        <li class="certs-empty">Certifications are on their way to this page.</li>
-        <!-- <li><span class="cert-name">Certification name</span><span class="cert-by">Issuer, year</span></li> -->
-      </ul>
-    </div>
-
-    <figure class="awards-pic reveal">
-      <img src="assets/rocket-launch.svg" alt="An animated papaya model rocket lifting off its launch rail" width="400" height="500">
-      <figcaption>Lift-off, on repeat.</figcaption>
+      <figcaption>The whole street turned out. I started this carnival for my community, and every ticket spent at it went through the Bank of Begonia.</figcaption>
     </figure>
+
+    <blockquote class="c-quote" data-speed="-0.06">
+      <p>I want to bridge what I learn in class with <strong>work that has real-world impact.</strong></p>
+      <p class="sign" aria-hidden="true">Harshan</p>
+    </blockquote>
+
+    <figure class="c-item c-a" data-speed="0.12"><p class="tiny">McLaren</p><img src="assets/mclaren-team.webp" alt="McLaren's drivers and pit crew in papaya race suits around the car" width="1080" height="1080" loading="lazy"></figure>
+    <figure class="c-item c-b" data-speed="-0.1"><p class="tiny">MathCORP</p><img src="assets/geometry-lessons.jpg" alt="A teacher pointing at a geometry proof on a chalkboard" width="1920" height="2419" loading="lazy"></figure>
+    <figure class="c-item c-c" data-speed="0.08"><p class="tiny">The ticket booth</p><img src="assets/carnival-tickets.jpg" alt="A yellow carnival ticket booth" width="1920" height="1440" loading="lazy"></figure>
+    <figure class="c-item c-d" data-speed="-0.14"><p class="tiny">McLaren MP4/1, 1982</p><img src="assets/mclaren-mp4.jpg" alt="A white and red 1982 McLaren Formula 1 car" width="1920" height="1438" loading="lazy"></figure>
   </section>
 
-  <!-- ============ PROJECTS: names passing a held frame ============ -->
-  <section class="work wrap" id="projects" aria-labelledby="work-h">
+  <!-- ============ PROJECTS (dark) ============ -->
+  <section class="work dark" id="projects" aria-labelledby="work-h">
     <div class="work-names">
-      <h2 id="work-h" class="section-h work-head reveal">Things I made</h2>
+      <h2 id="work-h" class="title"><span class="serif">Things</span> <span class="sans">I&nbsp;made</span></h2>
       <ul class="work-list">
-      <li>
-        <a class="work-name" href="#carnival" data-key="carnival" data-kind="Founder" data-role="Started it">Community carnival</a>
-        <p class="work-meta">Founder. I started it.</p>
-        <img class="work-inline" src="assets/carnival-2026.jpg" alt="My neighbours gathered on our street for Carnival 2026" loading="lazy">
-      </li>
-      <li>
-        <a class="work-name" href="#begonia" data-key="begonia" data-kind="Lead product developer" data-role="Built it">Bank of Begonia</a>
-        <p class="work-meta">Lead product developer. I built it.</p>
-        <img class="work-inline" src="assets/carnival-tickets.jpg" alt="A yellow carnival ticket booth" loading="lazy">
-      </li>
-      <li>
-        <a class="work-name" href="#r-mathcorp" data-key="mathcorp" data-kind="Teaching assistant" data-role="Excellence award">MathCORP</a>
-        <p class="work-meta">Teaching assistant. Excellence in Teaching Award.</p>
-        <img class="work-inline" src="assets/geometry-lessons.jpg" alt="A teacher pointing at a geometry proof on a chalkboard" loading="lazy">
-      </li>
-      <li>
-        <a class="work-name" href="#r-temple" data-key="temple" data-kind="Economics teacher" data-role="8 weekly sessions">Balaji Temple</a>
-        <p class="work-meta">Economics teacher. 8 weekly sessions.</p>
-        <img class="work-inline" src="assets/rupee.jpg" alt="An old silver one-rupee coin" loading="lazy">
-      </li>
-      <li>
-        <a class="work-name" href="#awards" data-key="rocketry" data-kind="Rocketry" data-role="P3, 9th grade">Rocketry</a>
-        <p class="work-meta">Third place, 9th grade.</p>
-        <img class="work-inline" src="assets/rocket-launch.svg" alt="An animated model rocket lifting off" loading="lazy">
-      </li>
+        <li>
+          <a class="work-name" href="#carnival" data-key="carnival" data-kind="Founder" data-role="I started it">Community carnival</a>
+          <p class="work-meta">Founder. I started it.</p>
+          <img class="work-inline" src="assets/carnival-2026.jpg" alt="My neighbours gathered on our street for Carnival 2026" loading="lazy">
+        </li>
+        <li>
+          <a class="work-name" href="#begonia" data-key="begonia" data-kind="Lead product developer" data-role="I built it">Bank of Begonia</a>
+          <p class="work-meta">Lead product developer. I built it.</p>
+          <img class="work-inline" src="assets/carnival-tickets.jpg" alt="A yellow carnival ticket booth" loading="lazy">
+        </li>
+        <li>
+          <a class="work-name" href="#r-mathcorp" data-key="mathcorp" data-kind="Teaching assistant" data-role="Excellence award">MathCORP</a>
+          <p class="work-meta">Teaching assistant. Excellence in Teaching Award.</p>
+          <img class="work-inline" src="assets/geometry-lessons.jpg" alt="A teacher pointing at a geometry proof on a chalkboard" loading="lazy">
+        </li>
+        <li>
+          <a class="work-name" href="#r-temple" data-key="temple" data-kind="Economics teacher" data-role="8 weekly sessions">Balaji Temple</a>
+          <p class="work-meta">Economics teacher. 8 weekly sessions.</p>
+          <img class="work-inline" src="assets/rupee.jpg" alt="An old silver one-rupee coin" loading="lazy">
+        </li>
+        <li>
+          <a class="work-name" href="#awards" data-key="rocketry" data-kind="Rocketry" data-role="P3, 9th grade">Rocketry</a>
+          <p class="work-meta">Third place, 9th grade.</p>
+          <img class="work-inline" src="assets/rocket-launch.svg" alt="An animated model rocket lifting off" loading="lazy">
+        </li>
       </ul>
     </div>
     <div class="work-side" aria-hidden="true">
@@ -146,33 +185,20 @@
           <img data-key="temple" src="assets/rupee.jpg" alt="" loading="lazy">
           <img data-key="rocketry" src="assets/rocket-launch.svg" alt="" loading="lazy">
         </div>
-        <p class="work-facts"><span data-fact="kind">Founder</span><span data-fact="role">Started it</span></p>
+        <p class="work-facts"><span data-fact="kind">Founder</span><span data-fact="role">I started it</span></p>
       </div>
     </div>
   </section>
 
-  <!-- ============ CARNIVAL 2026 ============ -->
-  <section class="carnival" id="carnival" aria-labelledby="carnival-h">
-    <figure class="carnival-pic">
-      <img src="assets/carnival-2026.jpg" alt="Over a hundred neighbours sitting and standing together on our street in front of the carnival tents" width="1215" height="911" loading="lazy">
-      <h2 id="carnival-h" class="carnival-h">Carnival 2026</h2>
-    </figure>
-    <p class="carnival-cap wrap"><span>The whole street turned out. I started this carnival for my community, and every ticket spent at it went through the Bank of Begonia.</span></p>
-  </section>
-
-  <!-- ============ BANK OF BEGONIA: the live demo ============ -->
-  <section class="begonia wrap" id="begonia" aria-labelledby="begonia-h">
+  <!-- ============ BANK OF BEGONIA ============ -->
+  <section class="begonia" id="begonia" aria-labelledby="begonia-h">
     <div class="begonia-text">
-      <h2 id="begonia-h" class="section-h reveal">Bank of Begonia</h2>
+      <h2 id="begonia-h" class="title"><span class="serif">Bank of</span> <span class="sans">Begonia</span></h2>
       <p class="reveal">I started a carnival for my community, and then built the ticket system it runs on. Bank of Begonia is a small bank for carnival tickets: every visitor has a QR wallet, stalls scan it to charge tickets, friends can send tickets to each other, and a central server keeps every balance straight.</p>
       <p class="reveal">Organizers and stall owners see live numbers for every stall, so they know where the crowd is and when to restock.</p>
-      <p class="reveal">Bank of Begonia is open to everyone: you can sign up for your own wallet today.</p>
-      <p class="reveal"><a class="btn" href="https://cc.teabreaktech.com">Sign up for Bank of Begonia</a></p>
-      <p class="reveal">Or try it right here: you have 20 tickets. Spend them, send some to a friend, and watch the organizer's board.</p>
-      <figure class="begonia-plate reveal">
-        <img src="assets/begonia.jpg" alt="An eighteenth-century botanical engraving of a pink begonia" width="1920" height="2601" loading="lazy">
-        <figcaption>The flower the bank is named after, in an old botanical engraving.</figcaption>
-      </figure>
+      <p class="reveal"><strong>It's open to everyone. You can sign up for your own wallet today.</strong></p>
+      <p class="reveal"><a class="pill pill-lg" href="https://cc.teabreaktech.com">Sign up for Bank of Begonia</a></p>
+      <p class="reveal soft">Or try it right here: you have 20 tickets. Spend them, send some to a friend, and watch the organizer's board.</p>
     </div>
 
     <div class="wallet reveal" data-ui>
@@ -184,7 +210,6 @@
           </div>
           <svg id="qr" class="qr" viewBox="0 0 25 25" role="img" aria-label="Wallet QR code"></svg>
         </div>
-
         <p class="wallet-label">Spend at a stall</p>
         <div class="stalls" id="stalls">
           <button type="button" data-stall="Ring toss" data-cost="3">Ring toss <span>3</span></button>
@@ -193,12 +218,11 @@
           <button type="button" data-stall="Dunk tank" data-cost="5">Dunk tank <span>5</span></button>
         </div>
         <div class="wallet-actions">
-          <button type="button" class="btn btn-small" id="send">Send 5 to a friend</button>
+          <button type="button" class="pill" id="send">Send 5 to a friend</button>
           <button type="button" class="link-btn" id="reset">Start over</button>
         </div>
         <p class="wallet-log" id="log" aria-live="polite">Scan at any stall to pay.</p>
       </div>
-
       <div class="board">
         <p class="wallet-label">Organizer's board</p>
         <ul class="board-rows" id="board"></ul>
@@ -207,45 +231,30 @@
     </div>
   </section>
 
-  <!-- ============ ABOUT ============ -->
-  <section class="about wrap" id="about" aria-labelledby="about-h">
-    <figure class="about-pic reveal">
-      <img src="assets/harshan.webp" alt="Harshan Kamesh, smiling, in a blue tuxedo and bow tie" width="800" height="800" loading="lazy">
-    </figure>
-    <div class="about-text">
-      <h2 id="about-h" class="section-h reveal">About me</h2>
-      <p class="statement reveal"><strong>I'm Harshan Kamesh.</strong> I like problems with numbers in them.</p>
-      <p class="about-body reveal">I like explaining them even more. I teach math to middle schoolers, I've taught economics to kids and adults, and I started a carnival and built the bank that runs it. When I'm not doing that, I'm at cricket practice with my school team, or watching McLaren on a Sunday.</p>
-      <ul class="about-facts reveal">
-        <li>Monroe Township, NJ</li>
-        <li>Monroe Township High School</li>
-        <li><a href="#contact">How to reach me</a></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- ============ SPORT: the papaya field ============ -->
-  <section class="sport" id="sport" aria-labelledby="sport-h">
-    <div class="wrap sport-head">
-      <h2 id="sport-h" class="section-h reveal">Papaya on Sundays, whites on Saturdays</h2>
-      <p class="reveal">I watch every Formula 1 race, and my team is McLaren. I also play cricket for my school.</p>
-    </div>
-    <div class="wrap gallery">
-      <figure class="g g1 reveal"><img src="assets/mclaren-mp4.jpg" alt="A white and red 1982 McLaren MP4/1 Formula 1 car on display" width="1920" height="1438" loading="lazy"><figcaption>McLaren MP4/1, 1982.</figcaption></figure>
-      <figure class="g g2 reveal"><img src="assets/mclaren-team.webp" alt="McLaren's drivers and pit crew in papaya race suits around the car in the pit lane" width="1080" height="1080" loading="lazy"><figcaption>My team, in papaya.</figcaption></figure>
-      <figure class="g g3 reveal"><img src="assets/cricket-match.jpg" alt="A cricket match on a sunny field behind a white picket fence" width="1920" height="1277" loading="lazy"><figcaption>A Saturday match, picket fence and all.</figcaption></figure>
-      <figure class="g g4 reveal"><img src="assets/cricket-rowlandson.jpg" alt="Thomas Rowlandson's comic print of a cricket match" width="1920" height="1374" loading="lazy"><figcaption>Cricket in 1811, by Thomas Rowlandson.</figcaption></figure>
+  <!-- ============ ON TRACK / ON THE PITCH ============ -->
+  <section class="split" id="sport" aria-labelledby="sport-h">
+    <h2 id="sport-h" class="visually-hidden">Sport</h2>
+    <figure class="split-pic split-l"><img src="assets/mclaren-team.webp" alt="McLaren's drivers and pit crew in papaya race suits around the car" width="1080" height="1080" loading="lazy"></figure>
+    <figure class="split-pic split-r"><img src="assets/cricket-match.jpg" alt="A cricket match on a sunny field behind a white picket fence" width="1920" height="1277" loading="lazy"></figure>
+    <div class="split-text">
+      <div class="split-col">
+        <p class="split-word"><span class="serif">On</span><span class="sans">Track</span></p>
+        <p>Every Formula 1 race, every Sunday. My team is McLaren.</p>
+      </div>
+      <div class="split-col">
+        <p class="split-word"><span class="serif">On</span><span class="sans">Pitch</span></p>
+        <p>I play cricket for my school team.</p>
+      </div>
     </div>
   </section>
 
   <!-- ============ RÉSUMÉ ============ -->
-  <section class="resume wrap" id="resume" aria-labelledby="resume-h">
+  <section class="resume" id="resume" aria-labelledby="resume-h">
     <div class="resume-head">
-      <h2 id="resume-h" class="section-h reveal">Résumé</h2>
-      <p class="reveal">I'm interested in mathematics and economics, and I'm looking for a chance to help with research and development on projects with real-world impact.</p>
-      <button type="button" class="btn reveal" id="print">Print my résumé</button>
+      <h2 id="resume-h" class="title"><span class="serif">My</span> <span class="sans">Résumé</span></h2>
+      <p>I'm interested in mathematics and economics, and I'm looking for a chance to help with research and development on projects with real-world impact.</p>
+      <button type="button" class="pill pill-lg" id="print">Print my résumé</button>
     </div>
-
     <ol class="jobs">
       <li class="job reveal" id="r-mathcorp">
         <h3>MathCORP</h3>
@@ -267,60 +276,36 @@
         <p class="job-role">Teacher</p>
         <p>Taught a group of 8 middle school students on my own time.</p>
       </li>
+      <li class="job reveal">
+        <h3>Skills</h3>
+        <p>Teamwork and leadership, mathematics, problem solving, communication.</p>
+      </li>
     </ol>
-
-    <div class="skills reveal">
-      <h3>Skills</h3>
-      <p>Teamwork and leadership, mathematics, problem solving, communication.</p>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section class="contact" id="contact" aria-labelledby="contact-h">
-    <h2 id="contact-h" class="visually-hidden">Contact</h2>
-    <a class="c-row" href="mailto:hkamesh8@gmail.com">hkamesh8@gmail.com</a>
-    <a class="c-row" href="https://github.com/hkamesh476">github.com/hkamesh476</a>
-    <p class="c-row">Monroe Township, New Jersey</p>
-    <p class="c-row c-hello">Say hello <a class="round" href="mailto:hkamesh8@gmail.com?subject=Hi%20Harshan" aria-label="Email Harshan"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4"/></svg></a></p>
   </section>
 
 </main>
 
-<!-- ============ FOOTER ============ -->
-<footer class="footer">
-  <div class="foot-cols">
-    <div>
-      <p class="foot-first">Contact</p>
-      <p><a href="mailto:hkamesh8@gmail.com">hkamesh8@gmail.com</a></p>
-      <p>Monroe Township, NJ</p>
-    </div>
-    <div>
-      <p class="foot-first">On this page</p>
-      <p><a href="#awards">Awards</a></p>
-      <p><a href="#projects">Projects</a></p>
-      <p><a href="#sport">Sport</a></p>
-      <p><a href="#resume">Résumé</a></p>
-    </div>
-    <div>
-      <p class="foot-first">Elsewhere</p>
-      <p><a href="https://github.com/hkamesh476">GitHub</a></p>
-    </div>
-    <div class="foot-credits">
-      <p class="foot-first">Pictures</p>
-      <p class="credits">Photos of me and Carnival 2026 are my own. McLaren team photo: McLaren Racing. Others from Wikimedia Commons:
-        <a href="https://commons.wikimedia.org/w/index.php?curid=2634198">McLaren MP4</a> by John Chapman, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>;
-        <a href="https://commons.wikimedia.org/w/index.php?curid=39768183">Cootamundra cricket match</a> by Mattinbgn, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>;
-        <a href="https://commons.wikimedia.org/w/index.php?curid=56702014">Carnival ride tickets booth</a> by Corey Coyle, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>;
-        <a href="https://commons.wikimedia.org/w/index.php?curid=184847763">The Oblique-leaved Begonia</a> by James Caldwall after Philip Reinagle, CC0;
-        <a href="https://commons.wikimedia.org/wiki/File:Geometry_Lessons.jpg">Geometry Lessons</a> by KUHT, public domain;
-        <a href="https://commons.wikimedia.org/w/index.php?curid=92707005">Rural Sports or a Cricket Match Extraordinary</a> by Thomas Rowlandson, CC0;
-        <a href="https://commons.wikimedia.org/wiki/File:One_Rupee_East_India_Company.JPG">One Rupee, East India Company</a> by Ranjithsiji, public domain.
-      </p>
+<!-- ============ FOOTER (dark) ============ -->
+<footer class="footer dark" id="contact">
+  <div class="foot-top">
+    <h2 class="title"><span class="serif">Say</span> <span class="sans">Hello</span></h2>
+    <a class="foot-mail" href="mailto:hkamesh8@gmail.com">hkamesh8@gmail.com</a>
+    <div class="foot-links">
+      <a class="pill" href="mailto:hkamesh8@gmail.com?subject=Hi%20Harshan">Email me</a>
+      <a class="pill pill-ghost" href="https://github.com/hkamesh476">GitHub</a>
+      <a class="pill pill-ghost" href="https://cc.teabreaktech.com">Bank of Begonia</a>
     </div>
   </div>
-  <div class="foot-mark">
-    <svg class="wordmark" viewBox="0 0 1000 118" role="img" aria-label="Harshan Kamesh"><text x="500" y="112" text-anchor="middle" textLength="996" lengthAdjust="spacingAndGlyphs">HARSHAN KAMESH</text></svg>
-    <p class="legal">© <span id="year">2026</span> Harshan Kamesh</p>
+  <p class="foot-mark" aria-label="Harshan Kamesh"><span class="serif">Harshan</span> <span class="sans">Kamesh</span></p>
+  <div class="foot-legal">
+    <p>© <span id="year">2026</span> Harshan Kamesh, Monroe Township, NJ</p>
+    <p class="credits">Photos of me and Carnival 2026 are my own. McLaren team photo: McLaren Racing. Others from Wikimedia Commons:
+      <a href="https://commons.wikimedia.org/w/index.php?curid=2634198">McLaren MP4</a> by John Chapman, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>;
+      <a href="https://commons.wikimedia.org/w/index.php?curid=39768183">Cootamundra cricket match</a> by Mattinbgn, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>;
+      <a href="https://commons.wikimedia.org/w/index.php?curid=56702014">Carnival ride tickets booth</a> by Corey Coyle, <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>;
+      <a href="https://commons.wikimedia.org/wiki/File:Geometry_Lessons.jpg">Geometry Lessons</a> by KUHT, public domain;
+      <a href="https://commons.wikimedia.org/wiki/File:One_Rupee_East_India_Company.JPG">One Rupee, East India Company</a> by Ranjithsiji, public domain.
+    </p>
   </div>
 </footer>
 
