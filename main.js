@@ -116,12 +116,4 @@
     names.forEach((n) => mid.observe(n));
   }
 
-  /* ---------- Résumé ---------- */
-  const printBtn = document.getElementById('print');
-  if (printBtn) {
-    printBtn.addEventListener('click', () => {
-      document.querySelectorAll('.reveal').forEach((el) => el.classList.add('in'));
-      print();
-    });
-  }
 })();

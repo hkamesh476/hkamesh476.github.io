@@ -281,6 +281,13 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .resume { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); column-gap: var(--gap); row-gap: 48px; padding: var(--section) var(--m); align-items: start; }
 .resume-head .title { font-size: clamp(3rem, 1rem + 4.2vw, 5.75rem); }
 .resume-head { grid-column: 1 / span 4; display: grid; gap: 20px; justify-items: start; position: sticky; top: 90px; }
+.resume-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.resume-page {
+  grid-column: 6 / -1; display: block; background: #fff; border-radius: 6px; overflow: hidden;
+  outline: 1.5px solid var(--ink); outline-offset: 0; transition: transform .3s var(--ease-out);
+}
+.resume-page:hover { transform: translateY(-4px); }
+.resume-page img { width: 100%; height: auto; }
 .jobs { grid-column: 6 / -1; }
 .job { padding: 28px 0; border-top: 1.5px solid var(--ink); display: grid; gap: 8px; scroll-margin-top: 90px; }
 .job:last-child { border-bottom: 1.5px solid var(--ink); }
@@ -410,7 +417,7 @@ figcaption code { font-family: ui-monospace, Menlo, Consolas, monospace; font-si
   .begonia-text { grid-column: 1 / -1; max-width: 62ch; }
   .begonia-pic { grid-column: 1 / -1; max-width: 560px; }
   .resume-head { grid-column: 1 / -1; position: static; }
-  .jobs { grid-column: 1 / -1; }
+  .jobs, .resume-page { grid-column: 1 / -1; }
   .split { display: grid; grid-template-columns: 1fr 1fr; gap: 32px var(--gap); min-height: 0; place-items: stretch; }
   .split-pic { position: static; transform: none; width: 100%; }
   .split-text { grid-column: 1 / -1; grid-row: 2; max-width: none; grid-template-columns: 1fr 1fr; }
